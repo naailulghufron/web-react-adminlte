@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Navbar() {
+  const [click, setClick] = useState(false);
+
+  const showSideBar = () => {
+    setClick(!click);
+  }
   return (
     <div>
       <nav className="main-header navbar navbar-expand-md navbar-light navbar-white">
@@ -16,7 +21,7 @@ export default function Navbar() {
             {/* Left navbar links */}
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" data-widget="pushmenu" href="url_fack" role="button"><i className="fas fa-bars" /></a>
+                <a className="nav-link" onClick={showSideBar} data-widget="pushmenu" href="url_fack" role="button"><i className={click ? "fas fa-times" : "fas fa-bars"} /></a>
               </li>
               <li className="nav-item">
                 <a href="index3.html" className="nav-link">Home</a>
