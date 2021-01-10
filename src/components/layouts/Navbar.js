@@ -10,7 +10,7 @@ export default function Navbar() {
     <div>
       <nav className="main-header navbar navbar-expand-md navbar-light navbar-white">
         <div className="container">
-          <a href="themes/index3.html" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             <img src="themes/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: '.8' }} />
             <span className="brand-text font-weight-light">AdminLTE 3</span>
           </a>

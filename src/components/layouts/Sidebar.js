@@ -28,12 +28,12 @@ export default class Sidebar extends Component {
               <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 {/* Add icons to the links using the .nav-icon class
          with font-awesome or any other icon font library */}
-                <li className="nav-item has-treeview">
+                {/* <li className="nav-item has-treeview">
                   <a href="fake_url" className="nav-link">
                     <i className="nav-icon fas fa-tachometer-alt" />
                     <p>
                       Dashboard
-              <i className="right fas fa-angle-left" />
+                    <i className="right fas fa-angle-left" />
                     </p>
                   </a>
                   <ul className="nav nav-treeview">
@@ -58,24 +58,57 @@ export default class Sidebar extends Component {
                       </a>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                 {/* <Link to='widget'>
                   <li className="nav-item">
                     Widget
                     </li>
                 </Link> */}
                 <li className="nav-item">
+                  <Link to='/'>
+                    <div className="nav-link">
+                      <i className="nav-icon fas fa-th" />
+                      <p>
+                        Home
+                      <span className="right badge badge-danger">New</span>
+                      </p>
+                    </div>
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link to='widget'>
-                    <a href="/widget" className="nav-link">
+                    <div className="nav-link">
                       <i className="nav-icon fas fa-th" />
                       <p>
                         Widgets
                       <span className="right badge badge-danger">New</span>
                       </p>
-                    </a>
+                    </div>
                   </Link>
                 </li>
-                <li className="nav-item has-treeview">
+                <li className="nav-item">
+                  <Link to='/shop'>
+                    <div className="nav-link">
+                      <i className="nav-icon fas fa-th" />
+                      <p>
+                        Shop
+                      <span className="right badge badge-danger">New</span>
+                      </p>
+                    </div>
+                  </Link>
+                </li>
+                {/* <li className="nav-item">
+                  <Link to='shop'>
+                    <a href="/shop" className="nav-link">
+                      <i className="nav-icon fas fa-th" />
+                      <p>
+                        Shop
+                      <span className="right badge badge-danger">New</span>
+                      </p>
+                    </a>
+                  </Link>
+                </li> */}
+                {/* <li className="nav-item has-treeview">
                   <a href="fake_url" className="nav-link">
                     <i className="nav-icon fas fa-copy" />
                     <p>
@@ -280,7 +313,7 @@ export default class Sidebar extends Component {
                       </a>
                     </li>
                   </ul>
-                </li>
+                </li> */}
 
               </ul>
             </nav>
