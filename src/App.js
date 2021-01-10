@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard'
 import Shop from './components/Shop'
 import ItemDetails from './components/ItemDetails'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import NotFoundPage from './components/NotFoundPage'
 
 
 export default class App extends Component {
@@ -17,10 +18,13 @@ export default class App extends Component {
         <div>
           <Navbar />
           <Sidebar />
-          <Route path="/widget" component={Widget} />
-          <Route path="/" exact component={Dashboard} />
-          <Route path="/shop" exact component={Shop} />
-          <Route path="/shop/:id" component={ItemDetails} />
+          <Switch>
+            <Route path="/" exact component={Dashboard} />
+            <Route path="/widget" exact component={Widget} />
+            <Route path="/shop" exact component={Shop} />
+            <Route path="/shop/:id" exact component={ItemDetails} />
+            <Route path="*" component={NotFoundPage} />
+          </Switch>
           <Footer />
         </div>
 
